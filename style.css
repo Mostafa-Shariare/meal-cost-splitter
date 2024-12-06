@@ -1,0 +1,86 @@
+/* Apply a global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for body to center everything */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #e0f7fa; /* Light cyan background */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for all the elements */
+div {
+    display: flex;
+    flex-direction: column; /* Stack elements in a column */
+    gap: 20px; /* Space between elements */
+    align-items: center; /* Center align the elements horizontally */
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Set a fixed width for the form */
+}
+
+/* Style for each label */
+label {
+    font-size: 18px;
+    color: #00796b; /* Teal color for labels */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for input fields */
+input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #00796b; /* Green border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Add a focus effect to input fields */
+input:focus {
+    outline: none;
+    border-color: #004d40; /* Darker green when focused */
+    background-color: #e8f5e9; /* Light green background on focus */
+}
+
+/* Style for the result paragraphs */
+.result p {
+    font-size: 18px;
+    color: #00695c; /* Darker teal color for result text */
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Style for the button */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #ff7043; /* Coral color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* Hover effect for button */
+button:hover {
+    background-color: #f4511e; /* Darker coral color on hover */
+}
+
+/* Add a hover effect to result text */
+.result p:hover {
+    color: #ff7043; /* Coral color when hovered */
+    cursor: pointer;
+}
