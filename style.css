@@ -1,71 +1,70 @@
-/* Apply a global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Style for body to center everything */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #e0f7fa; /* Light cyan background */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: 'Arial', sans-serif;
+    background-image: url('https://media.gettyimages.com/id/1471847063/video/giraffes-walking-in-a-row-below-dramatic-sunrise-sky-on-nature-reserve.jpg?s=640x640&k=20&c=NhjPlITImjGNuBM3RVPjW2XLeWG-Rk4DnzX-I6bChIM=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Container for all the elements */
 div {
     display: flex;
-    flex-direction: column; /* Stack elements in a column */
-    gap: 20px; /* Space between elements */
-    align-items: center; /* Center align the elements horizontally */
-    background-color: #ffffff; /* White background for the form */
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 350px; /* Set a fixed width for the form */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    backdrop-filter: blur(5px);
 }
 
-/* Style for each label */
 label {
     font-size: 18px;
-    color: #00796b; /* Teal color for labels */
+    color: #00796b;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Style for input fields */
 input {
     width: 100%;
-    padding: 8px;
-    border: 2px solid #00796b; /* Green border */
+    padding: 10px;
+    border: 2px solid #00796b;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Add a focus effect to input fields */
 input:focus {
     outline: none;
-    border-color: #004d40; /* Darker green when focused */
-    background-color: #e8f5e9; /* Light green background on focus */
+    border-color: #004d40;
+    background-color: rgba(220, 220, 220, 0.9);
 }
 
-/* Style for the result paragraphs */
 .result p {
     font-size: 18px;
-    color: #00695c; /* Darker teal color for result text */
+    color: #00695c;
     margin: 5px 0;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Style for the button */
 button {
     padding: 12px 25px;
     font-size: 18px;
-    background-color: #ff7043; /* Coral color */
+    background-color: #ff7043;
     color: white;
     border: none;
     border-radius: 10px;
@@ -74,13 +73,43 @@ button {
     font-weight: bold;
 }
 
-/* Hover effect for button */
 button:hover {
-    background-color: #f4511e; /* Darker coral color on hover */
+    background-color: #f4511e;
 }
 
-/* Add a hover effect to result text */
 .result p:hover {
-    color: #ff7043; /* Coral color when hovered */
+    color: #ff7043;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('https://media.gettyimages.com/id/1471847063/video/giraffes-walking-in-a-row-below-dramatic-sunrise-sky-on-nature-reserve.jpg?s=640x640&k=20&c=NhjPlITImjGNuBM3RVPjW2XLeWG-Rk4DnzX-I6bChIM=');
+        background-size: cover;
+        background-position: center;
+    }
+
+    div {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    .mealPerPerson label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    label, input, button {
+        font-size: 14px;
+    }
 }
